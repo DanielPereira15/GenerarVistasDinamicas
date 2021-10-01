@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GenerarVistasDinamicas</string>
+    <string name="numBotones">Introduce un número: </string>
+
+</resources>
