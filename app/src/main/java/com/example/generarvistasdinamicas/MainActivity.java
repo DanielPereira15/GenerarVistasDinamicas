@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText cajaTexto;
     LinearLayout lienzo;
-    int numBoton = 2;
+    int numBoton = 1;
     String valorBoton;
     int cantidadBotonesGenerar = 0;
 
@@ -35,7 +35,14 @@ public class MainActivity extends AppCompatActivity {
         //this.cajaTexto.setText("Hola");
         //nombre.charAt(0) > 'A' && nombre.charAt(0) < 'Z'
         //lienzo.removeAllViews();
+        View btnOriginal = lienzo.getChildAt(0);
+        lienzo.removeAllViews();
+
+        numBoton=1;
+        lienzo.addView(btnOriginal);
+
         if (cajaTexto.getText().charAt(0) > '0' && cajaTexto.getText().charAt(0) < '9') {
+
             cantidadBotonesGenerar = Integer.parseInt(cajaTexto.getText().toString());
             for (int i = 0; i < cantidadBotonesGenerar; i++) {
                 Button btn = new Button(this);
